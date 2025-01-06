@@ -1,0 +1,9 @@
+Unique ID,Patient Name,Scan Date,Measure,Result,Total Body Weight (kg),BMI (kg/m²),Basal Metabolic Rate (kcal/day),Total Body Fat (%),Fat Mass Index (FMI),Android/Gynoid Fat Ratio,Trunk/Legs Fat Ratio,Trunk/Limb Fat Mass Ratio,Visceral Fat Area (cm²),Visceral Fat Mass (g),Visceral Fat Volume (cm³),Subcutaneous Fat Area (cm²),Total Lean Body (%),Lean Mass Index (kg/m²),Appendicular Lean Mass Index (kg/m²),Total Bone Mass (%)
+RIGG_Alex_27-07-2020,RIGG_Alex,27/07/2020,,,78.08,23.55,1719.6,12,2.8,0.87,0.89,0.68,21,75.6,79.6,33.6,82.3,19.4,9.3,5.7
+RIGG_Alex_11-11-2020,RIGG_Alex,11/11/2020,,,78.25,23.55,1742.6,10.7,2.5,0.86,0.87,0.65,16,117.7,123.9,31.5,83.5,19.7,9.5,5.7
+RIGG_Alex_10-12-2019,RIGG_Alex,10/12/2019,,,88.111,25.98,1869.9,20.8,5.5,,,,36.3,68.4,72,104.8,74.5,19.6,9.1,4.8
+RIGG_Alex_29-06-2023,RIGG_Alex,29/06/2023,,,82.014,24.45,1857.1,10.3,2.6,0.85,1.09,0.81,17.3,105.4,110.9,30.7,84.4,20.9,9.7,5.3
+RIGG_Alex_30-06-2022,RIGG_Alex,30/06/2022,,,81.015,23.85,1786,11.3,2.8,0.9,1.11,0.8,16.3,118,124.2,40.1,83.2,20.4,9.2,5.4
+RIGG_Alex_19-01-2024,RIGG_Alex,19/01/2024,,,84.565,24.45,1892.1,11.5,2.9,0.92,1.18,0.88,29,4.2,4.4,33.6,83.4,21.3,9.8,5.1
+RIGG_Alex_06-06-2024,RIGG_Alex,6/06/2024,,,85.328,25.36,1902.5,11.6,3,0.99,1.15,0.85,33,32.2,33.9,34.4,83.2,21.4,10.1,5.2
+RIGG_Alex_03-12-2024,RIGG_Alex,3/12/2024,,,83.121,25.36,1865.6,11.7,2.9,0.92,1.06,0.79,32.8,36.4,38.3,30.4,83,20.8,9.9,5.2
