@@ -143,4 +143,4 @@ layout = html.Div([
     html.Div(
         id='graphs-container',
         style={
-            'display'
+            'display : 'block'
