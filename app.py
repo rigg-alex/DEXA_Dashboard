@@ -9,9 +9,6 @@ warnings.filterwarnings('ignore')
 app = Dash(__name__, use_pages=True, suppress_callback_exceptions=True)
 app.title = "DEXA Dashboard"
 
-# For Heroku compatibility
-server = app.server
-
 # Import pages here
 from pages import overview, body_part_trend
 
