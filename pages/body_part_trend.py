@@ -13,7 +13,7 @@ register_page(__name__,
              order=2)
 
 # GitHub raw URL for the master CSV
-MASTER_CSV_URL = "https://github.com/rigg-alex/DEXA_Dashboard/blob/main/Data/master_dexa_data.csv"
+MASTER_CSV_URL = "https://raw.githubusercontent.com/rigg-alex/DEXA_Dashboard/refs/heads/main/Data/master_dexa_data.csv?token=GHSAT0AAAAAAC4XXJYVIADITSB3Z4FLEBQYZ35UDJQ"
 
 # Load the data from GitHub
 def load_data():
