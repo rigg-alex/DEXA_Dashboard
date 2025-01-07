@@ -12,8 +12,8 @@ warnings.filterwarnings('ignore')
 register_page(__name__, path="/", order=1)
 
 # GitHub raw URLs for the CSVs (replace <username> and <repo> with your actual details)
-MASTER_CSV_URL = "https://raw.githubusercontent.com/rigg-alex/DEXA_Dashboard/refs/heads/main/Data/master_dexa_data.csv?token=GHSAT0AAAAAAC4XXJYVIADITSB3Z4FLEBQYZ35UDJQ"
-COMPOSITION_CSV_URL = "https://raw.githubusercontent.com/rigg-alex/DEXA_Dashboard/refs/heads/main/Data/composition_indices.csv?token=GHSAT0AAAAAAC4XXJYUBQFHGXSMBIXMAENUZ35UB7Q"
+MASTER_CSV_URL = "https://raw.githubusercontent.com/rigg-alex/DEXA_Dashboard/main/Data/master_dexa_data.csv"
+COMPOSITION_CSV_URL = "https://raw.githubusercontent.com/rigg-alex/DEXA_Dashboard/main/Data/composition_indices.csv"
 
 def load_data():
     master_df = pd.read_csv(MASTER_CSV_URL)
