@@ -4,22 +4,14 @@ import pandas as pd
 
 register_page(__name__, path="/dexa-dashboard", order=3)
 
-# GitHub raw URL for composition indices CSV 
-COMPOSITION_CSV_URL = "https://github.com/rigg-alex/DEXA_Dashboard/blob/main/Data/composition_indices.csv"
+COMPOSITION_CSV_URL = "https://raw.githubusercontent.com/rigg-alex/DEXA_Dashboard/main/Data/composition_indices.csv"
 
-# Load the data from GitHub
-try:
-    df = pd.read_csv(COMPOSITION_CSV_URL)
-except Exception as e:
-    raise Exception(f"Error loading data from GitHub: {e}")
-
-# Clean column names to avoid encoding issues
+# Load the data
+df = pd.read_csv(COMPOSITION_CSV_URL)
 df.columns = df.columns.str.replace("Â²", "²", regex=False).str.strip()
-
 df["Scan Date"] = pd.to_datetime(df["Scan Date"], format="%d/%m/%Y", errors="coerce")
 df.dropna(subset=["Scan Date"], inplace=True)
 
-# Define metrics (excluding "Measure" and "Result" columns)
 METRICS = [
     "Total Body Weight (kg)",
     "BMI (kg/m²)",
@@ -143,4 +135,47 @@ layout = html.Div([
     html.Div(
         id='graphs-container',
         style={
-            'display : 'block'
+            'display': 'grid',
+            'gridTemplateColumns': 'repeat(auto-fit, minmax(350px, 1fr))',
+            'gap': '20px',
+            'padding': '20px',
+            'maxHeight': 'calc(100vh - 250px)',
+            'overflowY': 'auto',
+            'overflowX': 'hidden'
+        }
+    )
+])
+
+
+@callback(
+    Output('graphs-container', 'children'),
+    Input('patient-selector', 'value')
+)
+def update_graphs(selected_patient):
+    if not selected_patient:
+        return html.Div("Please select a patient")
+
+    patient_df = df[df["Patient Name"] == selected_patient].sort_values("Scan Date")
+    
+    if patient_df.empty:
+        return html.Div("No data available for selected patient")
+
+    # Return an empty list first to clear the container
+    return [
+        [], # Clear the container before adding new graphs
+        *[
+            html.Div([
+                dcc.Graph(
+                    figure=create_time_series(patient_df, metric),
+                    config={'displayModeBar': False},
+                    style={'background': 'white'}
+                )
+            ], style={
+                'borderRadius': '8px',
+                'boxShadow': '0 2px 4px rgba(0,0,0,0.1)',
+                'padding': '15px',
+                'background': 'white'
+            })
+            for metric in METRICS
+        ]
+    ]
