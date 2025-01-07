@@ -6,10 +6,6 @@ import warnings
 app = Dash(__name__, use_pages=True, suppress_callback_exceptions=True)
 app.title = "DEXA Dashboard"
 
-# Run the app
-if __name__ == '__main__':
-    app.run_server(debug=False, host='0.0.0.0', port=8080)
-
 # Import pages here
 from pages import overview, body_part_trend
 
@@ -38,7 +34,7 @@ app.layout = html.Div([
         'marginBottom': '2rem'
     }),
     
-    # Main content
+    # Main content (for page content)
     html.Div(page_container, style={
         'maxWidth': '1200px',
         'margin': '0 auto',
@@ -118,5 +114,6 @@ app.index_string = '''
 </html>
 '''
 
+# Run the app
 if __name__ == '__main__':
-    app.run_server(debug=False)  # Set debug to False for production
+    app.run_server(debug=False, host='0.0.0.0', port=8080)  # Production configuration
