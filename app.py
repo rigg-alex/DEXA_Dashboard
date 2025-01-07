@@ -7,6 +7,7 @@ warnings.filterwarnings('ignore')
 
 # Initialize the app
 app = Dash(__name__, use_pages=True, suppress_callback_exceptions=True)
+    app.run_server(debug=False, host='0.0.0.0', port=8080)
 app.title = "DEXA Dashboard"
 
 # Import pages here
