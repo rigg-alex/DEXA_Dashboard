@@ -6,7 +6,7 @@ import os
 register_page(__name__, path="/symmetry", order=4)
 
 # GitHub raw URL for master CSV
-MASTER_CSV_URL = "https://github.com/rigg-alex/DEXA_Dashboard/blob/main/Data/master_dexa_data.csv"
+MASTER_CSV_URL = "https://raw.githubusercontent.com/rigg-alex/DEXA_Dashboard/refs/heads/main/Data/master_dexa_data.csv?token=GHSAT0AAAAAAC4XXJYVIADITSB3Z4FLEBQYZ35UDJQ"
 
 # Load data
 try:
