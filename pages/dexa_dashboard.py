@@ -4,7 +4,7 @@ import pandas as pd
 
 register_page(__name__, path="/dexa-dashboard", order=3)
 
-COMPOSITION_CSV_URL = "https://raw.githubusercontent.com/rigg-alex/DEXA_Dashboard/main/Data/composition_indices.csv"
+COMPOSITION_CSV_URL = "https://raw.githubusercontent.com/rigg-alex/DEXA_Dashboard/refs/heads/main/Data/composition_indices.csv?token=GHSAT0AAAAAAC4XXJYUBQFHGXSMBIXMAENUZ35UB7Q"
 
 # Load the data
 df = pd.read_csv(COMPOSITION_CSV_URL)
