@@ -2,13 +2,13 @@ from dash import Dash, dcc, html, page_container
 import dash
 import warnings
 
-# Suppress warnings
-warnings.filterwarnings('ignore')
-
 # Initialize the app
 app = Dash(__name__, use_pages=True, suppress_callback_exceptions=True)
-    app.run_server(debug=False, host='0.0.0.0', port=8080)
 app.title = "DEXA Dashboard"
+
+# Run the app
+if __name__ == '__main__':
+    app.run_server(debug=False, host='0.0.0.0', port=8080)
 
 # Import pages here
 from pages import overview, body_part_trend
