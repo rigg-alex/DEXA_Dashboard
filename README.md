@@ -4,8 +4,7 @@
 
 The DEXA Analysis Dashboard transforms raw DEXA scan PDFs into an interactive analytics platform. Starting with PDF extraction and data transformation, through to visualization and analysis, this project provides a complete solution for tracking and analyzing body composition data. The DEXA Analysis Dashboard is a web application designed to provide in-depth analysis of DEXA (Dual-energy X-ray Absorptiometry) scan data. This project was born out of the limitations of standard DEXA scan reports, particularly in their ability to track and analyze longitudinal changes in body composition.
 
-![image](https://github.com/user-attachments/assets/fe457d02-099a-4c61-9109-2e702c4bc26b)
-
+![image](https://github.com/user-attachments/assets/2ebc9e14-92fb-424d-a4d2-92a13ca2f0a2)
 
 ## Features
 
